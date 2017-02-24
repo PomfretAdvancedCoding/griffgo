@@ -1,7 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,14 +20,38 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgLogin" translatesAutoresizingMaskIntoConstraints="NO" id="KVZ-aV-KCN">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoH" translatesAutoresizingMaskIntoConstraints="NO" id="9Jq-zM-dmg">
+                                <rect key="frame" x="16" y="110" width="288" height="179.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9Jq-zM-dmg" secondAttribute="height" multiplier="343:214" id="fa5-6E-jLJ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KVZ-aV-KCN" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="5ap-zX-Fss"/>
+                            <constraint firstItem="KVZ-aV-KCN" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="8gR-GB-hZa"/>
+                            <constraint firstItem="9Jq-zM-dmg" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailingMargin" id="XCR-eb-ozp"/>
+                            <constraint firstItem="9Jq-zM-dmg" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="90" id="l6a-5C-z5p"/>
+                            <constraint firstItem="9Jq-zM-dmg" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="lec-57-Epv"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="KVZ-aV-KCN" secondAttribute="bottom" id="nFQ-C8-lrc"/>
+                            <constraint firstAttribute="trailing" secondItem="KVZ-aV-KCN" secondAttribute="trailing" id="wNc-P8-otk"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bgLogin" width="600" height="400"/>
+        <image name="logoH" width="1050" height="1050"/>
+    </resources>
 </document>
