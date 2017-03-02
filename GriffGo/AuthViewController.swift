@@ -30,7 +30,7 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func loginButton(_ sender: Any) {
-        
+        //this block of code checks if user put in email adress
         if (usernameOutlet.text?.characters.count)! > 18 {
         if usernameOutlet.text != "" {
         let user = usernameOutlet.text
@@ -60,7 +60,12 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
             
             return
         }
-        
+        /*User name password check
+         *
+         *uses alamofire to get user data from server
+         *The if else statment checks if the user is using the proper credatials
+         *
+         */
         Alamofire.request("https://pomfretschool.myschoolapp.com/api/authentication/login/", parameters: loginParameters).responseJSON { response in
             //print(response.result.value)
             if let alamoJSON = response.result.value {
@@ -96,6 +101,10 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
             }
             
             //If a response was recived and the user was found
+            /*
+             *this code gets the user dat for the home screen
+             *And checks if the user s a student or faculty. 
+             */
             if response.data != nil && self.userID != 0 {
                 print("Attempting ID Authetication...")
                 print(UserData.sharedInstance.studentData.count)
@@ -123,6 +132,10 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
                         return
                     }
                 }
+                /*
+                 
+                 this code handles the parsing of the Faculty JSON data.
+                 */
                     for (index, _) in UserData.sharedInstance.facultyData.enumerated() {
                                 if UserData.sharedInstance.facultyData[index].userID == String(self.userID) {
                                 UserData.sharedInstance.userID = self.userID
@@ -157,7 +170,10 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
                 
                 //Comment this line to enable the Test user:
                 //if elem["StudentID"].element!.text! == "2723453" {continue}
-                
+                /*
+                 
+                 thsi code creates the profile for the user
+                 */
                 UserData.sharedInstance.studentData.append((
                     userID: elem["StudentID"].element!.text!,
                     firstName: elem["FirstName"].element!.text!,
@@ -195,6 +211,10 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
         //Get Master Token Request
         Alamofire.request("https://pomfretschool.myschoolapp.com/api/authentication/login/", parameters: tokenParameters).responseJSON { response in
             if let alamoJSON = response.result.value {
+                /*
+                 chcks if the Token/ Json data has something in it and prints the data or send out an error message.
+                 
+                 */
                 print("Master Token Response: \(response.response)")
                 let json = JSON(alamoJSON)
                 if json["Token"].string != nil {
