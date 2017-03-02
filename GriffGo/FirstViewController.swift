@@ -16,6 +16,18 @@ import Firebase
 class FirstViewController: UIViewController {
     
     var ref: FIRDatabaseReference!
+    
+    //==============
+    //==============
+    //==============
+    
+    @IBOutlet weak var scheduleWebView: UIWebView!
+    let scheduleURL = "https://pomfretschool.myschoolapp.com/app/student#studentmyday/schedule" // make an alamo request?
+    
+    
+    //==============
+    //==============
+    //==============
 
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var greetingLabel: UILabel!
@@ -33,7 +45,7 @@ class FirstViewController: UIViewController {
     }
     
     func picLoader() {
-        self.loadingIcon.startAnimating()
+        //self.loadingIcon.startAnimating()
         var photo = UserData.sharedInstance.userPhoto
         if photo == "" {
             photo = "large_user2723453_934847.png"
@@ -42,7 +54,7 @@ class FirstViewController: UIViewController {
             if let image = response.result.value {
                 let circularImage = image.af_imageRoundedIntoCircle()
                 self.userPic.image = circularImage
-                self.loadingIcon.stopAnimating()
+                //self.loadingIcon.stopAnimating()
             }
         }
 
@@ -133,6 +145,20 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        //==============
+        //==============
+        //==============
+        
+        scheduleWebView.loadHTMLString(scheduleURL, baseURL: nil)
+        
+        
+        //==============
+        //==============
+        //==============
+
+        
         
         //Load Firebase
         ref = FIRDatabase.database().reference()
