@@ -20,6 +20,7 @@ class SportsDetailViewController: UIViewController {
     @IBOutlet weak var scoreOutlet: UILabel!
     @IBOutlet weak var highlightsOutlet: UITextView!
     
+    //gets the game data
     func getGame() -> Int {
         for (index, _) in UserData.sharedInstance.sportsData.enumerated() {
             if UserData.sharedInstance.sportsData[index].gameID == gameID {
@@ -29,6 +30,15 @@ class SportsDetailViewController: UIViewController {
         return 0
     }
     
+    /*
+     *team is attached to label
+     * If there is a headline that is attached to the headline, if not then the score is attached
+     *outcome is attached
+     * Outcome is attached- if it is a WIn it is set to green, loss is set to red, else is black
+     *takes away HTML tags and puts the stripped text as the highlight
+     *If there is no highlight it is set to "No Highlights😢"
+     */
+
     func loadData(id : Int) {
         
         teamOutlet.text = UserData.sharedInstance.sportsData[id].team

@@ -39,10 +39,21 @@ class SportsTableViewController: UITableViewController, UITextFieldDelegate {
     }
 
     //Table View Functions
+    /*
+     *Makes the number of rows be the number of pieces of data
+     */
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return UserData.sharedInstance.sportsData.count
     }
     
+    /*
+     *Pulls game info from user data(team, location, outcome, date)
+     *attaches location, team, and outcome to table view
+     *If the team won the outcome label is green, loss is red, the default is black
+     * Date is formated to month day
+     * date is attached to view controller
+     */
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "SportCell", for: indexPath) as! SportsTableViewCell
