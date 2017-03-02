@@ -37,6 +37,11 @@ class DirectoryViewController: UIViewController {
         UIApplication.shared.openURL(url as! URL)
     }
 
+    /* Get the User's information
+     * using loop for to find the information then return the right one
+     *
+     *
+     */
     func getUser() -> Int {
         for (index, _) in UserData.sharedInstance.studentData.enumerated() {
             if UserData.sharedInstance.studentData[index].userID == directoryID {
@@ -45,7 +50,14 @@ class DirectoryViewController: UIViewController {
         }
         return 0
     }
-    
+    /* Show the information on the screen
+     * get the image if can't find use Griffing picture instead
+     * show first + lastname
+     * show class
+     * show dorm
+     * show student's number if the user is faculty
+     *
+     */
     func loadData(id : Int) {
         
         self.loadingIcon.startAnimating()
@@ -64,7 +76,7 @@ class DirectoryViewController: UIViewController {
         
         nameOutlet.text = String(
             UserData.sharedInstance.studentData[id].firstName + " " +
-            UserData.sharedInstance.studentData[id].lastName
+                UserData.sharedInstance.studentData[id].lastName
         )
         classOutlet.text = "Class of \(UserData.sharedInstance.studentData[id].yog)"
         self.email = String(UserData.sharedInstance.studentData[id].email)
@@ -75,13 +87,17 @@ class DirectoryViewController: UIViewController {
         
         if UserData.sharedInstance.isFaculty == true {
             self.phone = UserData.sharedInstance.studentData[id].phone!
-        
+            
         }
+        
         emailOutlet.setTitle( email , for: .normal )
         phoneOutlet.setTitle( phone , for: .normal )
         dormOutlet.text = dorm
     }
-    
+    /*  Call the functions above
+     *  Call loadData with the data from getUser
+     *
+     */
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData(id : getUser())
@@ -89,24 +105,22 @@ class DirectoryViewController: UIViewController {
         //load student directory list (userID, name, year, dorm, advisor)
         //apppy properties
         //load image and data
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+
+/*
+ // MARK: - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+ // Get the new view controller using segue.destinationViewController.
+ // Pass the selected object to the new view controller.
+ }
+ */
