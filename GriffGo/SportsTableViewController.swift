@@ -32,7 +32,8 @@ class SportsTableViewController: UITableViewController, UITextFieldDelegate {
     }
 
     // MARK: - Table view data source
-
+    //Returns the number of sections in the table view
+    // set to return 1(default)
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
