@@ -1,8 +1,8 @@
 //
-//  SportsDetailViewController.swift
+//  AssessmentDetailViewController.swift
 //  GriffGo
 //
-//  Created by Tim Baldyga on 1/2/17.
+//  Created by Tim Baldyga on 3/24/17.
 //  Copyright © 2017 Tim Baldyga. All rights reserved.
 //
 
@@ -13,7 +13,7 @@ import SWXMLHash
 import StringExtensionHTML
 import HTMLString
 
-class SportsDetailViewController: UIViewController {
+class AssignmentDetailViewController: UIViewController {
 
     @IBOutlet weak var outcomeOutlet: UILabel!
     @IBOutlet weak var teamOutlet: UILabel!

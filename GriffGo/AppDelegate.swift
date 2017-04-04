@@ -1,7 +1,6 @@
 //
 //  AppDelegate.swift
-//  GriffGo#12	0x000000010dfcc0cf in main at /Users/jakefarrell44/Desktop/untitled folder/griffgo/GriffGo/AppDelegate.swift:13
-
+//  GriffGo
 //
 //  Created by Tim Baldyga on 12/1/16.
 //  Copyright © 2016 Tim Baldyga. All rights reserved.

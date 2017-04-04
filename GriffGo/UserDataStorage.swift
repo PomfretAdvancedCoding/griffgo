@@ -16,12 +16,16 @@ class UserData {
     var firstName : String
     var lastName : String
     var nickName : String
-    var isFaculty : Bool
+    var faculty : Bool
+    var authenticated : Bool
     var userPhoto : String
     var userGreeting : String
+    
     var studentData : [(userID: String, firstName: String, lastName: String, nickName: String?, yog: String, email: String, photo: String?, phone : String?, dorm : String?)] = []
     var facultyData : [(userID: String, firstName: String, lastName: String, prefix: String?, email: String, photo: String?)] = []
-    var sportsData : [(gameID: String, team: String, location: String, title: String?, home: String, date: String, time: String?, score: String?, headline: String?, highlights: String?, outcome: String?)] = []
+    var sportsData : [(gameID: String, team: String, location: String, title: String?, home: String, date: String, time: String?,score: String?, headline: String?, highlights: String?, outcome: String?)] = []
+    var academicData : [(studentID: String, classID: String, facultyID: String, block: String, name: String, building: String, room: String)] = []
+    var assignmentData : [(description: String?, classID: String, assigned: String, due: String, title: String, type: String)] = []
     
     class var sharedInstance : UserData {
         struct Singleton {
@@ -37,7 +41,8 @@ class UserData {
         firstName = ""
         lastName = ""
         nickName = ""
-        isFaculty = false
+        faculty = false
+        authenticated = false
         userPhoto = ""
         userGreeting = ""
         

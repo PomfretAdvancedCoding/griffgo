@@ -8,10 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		3724C3A21DF866DA0009F049 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3724C3A11DF866DA0009F049 /* GoogleService-Info.plist */; };
-		372D10281E1AE4FC006D4A5B /* SportsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372D10271E1AE4FC006D4A5B /* SportsTableViewCell.swift */; };
-		373148F81E12FC7700736FAE /* SportsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373148F71E12FC7700736FAE /* SportsTableViewController.swift */; };
 		373A78F51E1E18D1009B8807 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373A78F41E1E18D1009B8807 /* CloudKit.framework */; };
-		374AAC4F1E1B32C300E91912 /* SportsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374AAC4E1E1B32C300E91912 /* SportsDetailViewController.swift */; };
+		37551B4C1E86111F00C8CD56 /* SportsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37551B491E86111F00C8CD56 /* SportsDetailViewController.swift */; };
+		37551B4D1E86111F00C8CD56 /* SportsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37551B4A1E86111F00C8CD56 /* SportsTableViewCell.swift */; };
+		37551B4E1E86111F00C8CD56 /* SportsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37551B4B1E86111F00C8CD56 /* SportsTableViewController.swift */; };
+		37551B521E86172A00C8CD56 /* AssignmentiDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37551B4F1E86172A00C8CD56 /* AssignmentiDetailViewController.swift */; };
+		37551B531E86172A00C8CD56 /* AcademicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37551B501E86172A00C8CD56 /* AcademicTableViewCell.swift */; };
+		37551B541E86172A00C8CD56 /* AcademicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37551B511E86172A00C8CD56 /* AcademicTableViewController.swift */; };
+		37551B561E8618A700C8CD56 /* AssignmentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37551B551E8618A700C8CD56 /* AssignmentTableViewController.swift */; };
 		376AD1231DF8BFEF00B24CC8 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376AD1221DF8BFEF00B24CC8 /* AuthViewController.swift */; };
 		376AD1271DF8D6B300B24CC8 /* UserDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376AD1261DF8D6B300B24CC8 /* UserDataStorage.swift */; };
 		37725CA31DFF8CB400B491D0 /* CustomFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37725CA21DFF8CB400B491D0 /* CustomFeedCell.swift */; };
@@ -20,6 +24,7 @@
 		37725CC51E003E3800B491D0 /* MailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37725CC41E003E3800B491D0 /* MailViewController.swift */; };
 		377DF4B41DF9E588005D9032 /* DirectoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DF4B31DF9E588005D9032 /* DirectoryViewController.swift */; };
 		3784BB8E1DFF5DDB00A34524 /* AnnouncementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3784BB8D1DFF5DDB00A34524 /* AnnouncementsViewController.swift */; };
+		379E0FE21E81E05500E41235 /* dataGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379E0FE11E81E05500E41235 /* dataGet.swift */; };
 		37AC3C531E00ABC3009FF492 /* SundialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AC3C521E00ABC3009FF492 /* SundialViewController.swift */; };
 		37AC3C561E00F487009FF492 /* AllListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AC3C551E00F487009FF492 /* AllListsViewController.swift */; };
 		37AC3C581E00F508009FF492 /* ListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AC3C571E00F508009FF492 /* ListDetailViewController.swift */; };
@@ -45,10 +50,14 @@
 
 /* Begin PBXFileReference section */
 		3724C3A11DF866DA0009F049 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		372D10271E1AE4FC006D4A5B /* SportsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsTableViewCell.swift; sourceTree = "<group>"; };
-		373148F71E12FC7700736FAE /* SportsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsTableViewController.swift; sourceTree = "<group>"; };
 		373A78F41E1E18D1009B8807 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		374AAC4E1E1B32C300E91912 /* SportsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsDetailViewController.swift; sourceTree = "<group>"; };
+		37551B491E86111F00C8CD56 /* SportsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsDetailViewController.swift; sourceTree = "<group>"; };
+		37551B4A1E86111F00C8CD56 /* SportsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsTableViewCell.swift; sourceTree = "<group>"; };
+		37551B4B1E86111F00C8CD56 /* SportsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsTableViewController.swift; sourceTree = "<group>"; };
+		37551B4F1E86172A00C8CD56 /* AssignmentiDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentiDetailViewController.swift; sourceTree = "<group>"; };
+		37551B501E86172A00C8CD56 /* AcademicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcademicTableViewCell.swift; sourceTree = "<group>"; };
+		37551B511E86172A00C8CD56 /* AcademicTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcademicTableViewController.swift; sourceTree = "<group>"; };
+		37551B551E8618A700C8CD56 /* AssignmentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentTableViewController.swift; sourceTree = "<group>"; };
 		376AD1221DF8BFEF00B24CC8 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		376AD1261DF8D6B300B24CC8 /* UserDataStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataStorage.swift; sourceTree = "<group>"; };
 		377180991DFF0B33000C7C5B /* GriffGo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GriffGo.entitlements; sourceTree = "<group>"; };
@@ -58,6 +67,7 @@
 		37725CC41E003E3800B491D0 /* MailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailViewController.swift; sourceTree = "<group>"; };
 		377DF4B31DF9E588005D9032 /* DirectoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryViewController.swift; sourceTree = "<group>"; };
 		3784BB8D1DFF5DDB00A34524 /* AnnouncementsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncementsViewController.swift; sourceTree = "<group>"; };
+		379E0FE11E81E05500E41235 /* dataGet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dataGet.swift; sourceTree = "<group>"; };
 		37AC3C521E00ABC3009FF492 /* SundialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SundialViewController.swift; sourceTree = "<group>"; };
 		37AC3C551E00F487009FF492 /* AllListsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllListsViewController.swift; sourceTree = "<group>"; };
 		37AC3C571E00F508009FF492 /* ListDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDetailViewController.swift; sourceTree = "<group>"; };
@@ -107,14 +117,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		373148F61E12EB3A00736FAE /* Sports */ = {
+		373148F61E12EB3A00736FAE /* Atheltics */ = {
 			isa = PBXGroup;
 			children = (
-				372D10271E1AE4FC006D4A5B /* SportsTableViewCell.swift */,
-				373148F71E12FC7700736FAE /* SportsTableViewController.swift */,
-				374AAC4E1E1B32C300E91912 /* SportsDetailViewController.swift */,
+				37551B491E86111F00C8CD56 /* SportsDetailViewController.swift */,
+				37551B4A1E86111F00C8CD56 /* SportsTableViewCell.swift */,
+				37551B4B1E86111F00C8CD56 /* SportsTableViewController.swift */,
 			);
-			name = Sports;
+			name = Atheltics;
+			sourceTree = "<group>";
+		};
+		37551B421E85B83500C8CD56 /* Academics */ = {
+			isa = PBXGroup;
+			children = (
+				37551B511E86172A00C8CD56 /* AcademicTableViewController.swift */,
+				37551B551E8618A700C8CD56 /* AssignmentTableViewController.swift */,
+				37551B4F1E86172A00C8CD56 /* AssignmentiDetailViewController.swift */,
+				37551B501E86172A00C8CD56 /* AcademicTableViewCell.swift */,
+			);
+			name = Academics;
 			sourceTree = "<group>";
 		};
 		37725CAD1DFFB46100B491D0 /* Resources */ = {
@@ -192,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				376AD1221DF8BFEF00B24CC8 /* AuthViewController.swift */,
+				379E0FE11E81E05500E41235 /* dataGet.swift */,
 			);
 			name = "Login Page";
 			sourceTree = "<group>";
@@ -226,11 +248,12 @@
 				376AD1261DF8D6B300B24CC8 /* UserDataStorage.swift */,
 				37AC3C751E010FDC009FF492 /* Login Page */,
 				37A5B33D1E0979D000312542 /* Home Page */,
+				37551B421E85B83500C8CD56 /* Academics */,
 				37AC3C741E010FCA009FF492 /* Directory */,
 				37AC3C731E010FBE009FF492 /* Announcements */,
 				37AC3C721E010FB2009FF492 /* E-Mail */,
 				37AC3C711E010FAC009FF492 /* Sundial */,
-				373148F61E12EB3A00736FAE /* Sports */,
+				373148F61E12EB3A00736FAE /* Atheltics */,
 				37AC3C541E00F47A009FF492 /* Reminders */,
 				37725CAD1DFFB46100B491D0 /* Resources */,
 				37C13C7A1DF0739C006B4B52 /* Assets.xcassets */,
@@ -382,12 +405,13 @@
 			files = (
 				376AD1231DF8BFEF00B24CC8 /* AuthViewController.swift in Sources */,
 				37AC3C701E010304009FF492 /* ChecklistItem+CoreDataProperties.swift in Sources */,
+				37551B531E86172A00C8CD56 /* AcademicTableViewCell.swift in Sources */,
 				37AC3C601E00FF9B009FF492 /* Checklists.xcdatamodel in Sources */,
 				37AC3C531E00ABC3009FF492 /* SundialViewController.swift in Sources */,
 				37C13C761DF0739C006B4B52 /* SecondViewController.swift in Sources */,
+				37551B4D1E86111F00C8CD56 /* SportsTableViewCell.swift in Sources */,
 				377DF4B41DF9E588005D9032 /* DirectoryViewController.swift in Sources */,
 				37C13C721DF0739C006B4B52 /* AppDelegate.swift in Sources */,
-				374AAC4F1E1B32C300E91912 /* SportsDetailViewController.swift in Sources */,
 				37AC3C5E1E00FEEE009FF492 /* ItemDetailViewController.swift in Sources */,
 				37725CC51E003E3800B491D0 /* MailViewController.swift in Sources */,
 				3784BB8E1DFF5DDB00A34524 /* AnnouncementsViewController.swift in Sources */,
@@ -401,13 +425,17 @@
 				37AC3C5C1E00F655009FF492 /* ChecklistViewController.swift in Sources */,
 				37725CA31DFF8CB400B491D0 /* CustomFeedCell.swift in Sources */,
 				376AD1271DF8D6B300B24CC8 /* UserDataStorage.swift in Sources */,
+				379E0FE21E81E05500E41235 /* dataGet.swift in Sources */,
+				37551B561E8618A700C8CD56 /* AssignmentTableViewController.swift in Sources */,
 				37725CBA1DFFB49300B491D0 /* ResourcesWebView.swift in Sources */,
 				37AC3C681E010290009FF492 /* Checklist+CoreDataClass.swift in Sources */,
 				37AC3C6C1E01029F009FF492 /* ChecklistItem+CoreDataClass.swift in Sources */,
-				372D10281E1AE4FC006D4A5B /* SportsTableViewCell.swift in Sources */,
+				37551B4C1E86111F00C8CD56 /* SportsDetailViewController.swift in Sources */,
 				37AC3C641E00FFC0009FF492 /* CoreDataStack.swift in Sources */,
 				37AC3C6A1E010299009FF492 /* Checklist+CoreDataProperties.swift in Sources */,
-				373148F81E12FC7700736FAE /* SportsTableViewController.swift in Sources */,
+				37551B521E86172A00C8CD56 /* AssignmentiDetailViewController.swift in Sources */,
+				37551B541E86172A00C8CD56 /* AcademicTableViewController.swift in Sources */,
+				37551B4E1E86111F00C8CD56 /* SportsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

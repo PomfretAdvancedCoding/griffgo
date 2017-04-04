@@ -1,9 +1,9 @@
 //
-//  SportsTableViewController.swift
+//  AcademicTableViewController.swift
 //  GriffGo
 //
-//  Created by Tim Baldyga on 12/27/16.
-//  Copyright © 2016 Tim Baldyga. All rights reserved.
+//  Created by Tim Baldyga on 3/24/17.
+//  Copyright © 2017 Tim Baldyga. All rights reserved.
 //
 
 import UIKit
@@ -11,10 +11,10 @@ import Alamofire
 import SwiftyJSON
 import SWXMLHash
 
+var classArray = [String]()
+var classID = String()
 
-var gameID = String()
-
-class SportsTableViewController: UITableViewController, UITextFieldDelegate {
+class AcademicTableViewController: UITableViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,39 +40,47 @@ class SportsTableViewController: UITableViewController, UITextFieldDelegate {
 
     //Table View Functions
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return UserData.sharedInstance.sportsData.count
+        return countClasses()
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SportCell", for: indexPath) as! SportsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ClassCell", for: indexPath) as! AcademicTableViewCell
         
-        if UserData.sharedInstance.sportsData[indexPath.row].team != ""{
-            cell.teamOutlet?.text = String("@ " + UserData.sharedInstance.sportsData[indexPath.row].location)
-            cell.gameOutlet?.text = String(UserData.sharedInstance.sportsData[indexPath.row].team)
-            cell.outcomeOutlet?.text = UserData.sharedInstance.sportsData[indexPath.row].outcome
-            
-            if UserData.sharedInstance.sportsData[indexPath.row].outcome == "Win" {
-                cell.outcomeOutlet.textColor = #colorLiteral(red: 0, green: 0.9768045545, blue: 0, alpha: 1)
+        if UserData.sharedInstance.faculty {
+            var tempClassID = "0" //used to keep track of student count
+            var studentCounter = 0
+            for classGroup in UserData.sharedInstance.academicData {
+                if classGroup.facultyID  == String(UserData.sharedInstance.userID) && !classArray.contains(classGroup.classID) && classGroup.classID != tempClassID {
+                    tempClassID = classGroup.classID
+                    cell.classBlock.text = classGroup.block
+                    cell.className.text = classGroup.name
+                    cell.classLocation.text = classGroup.building + " " + classGroup.room
+                    classArray.append(classGroup.classID)
+                }
+                if classGroup.classID == tempClassID {
+                    studentCounter += 1
+                }
+                break
             }
-            else if UserData.sharedInstance.sportsData[indexPath.row].outcome == "Loss" {
-                cell.outcomeOutlet.textColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
+            cell.classTeacher.text = "\(studentCounter) students"
+        }
+        else {
+            for classGroup in UserData.sharedInstance.academicData {
+                if classGroup.studentID  == String(UserData.sharedInstance.userID) && !classArray.contains(classGroup.classID) {
+                    cell.classBlock.text = classGroup.block
+                    cell.className.text = classGroup.name
+                    cell.classLocation.text = classGroup.building + " " + classGroup.room
+                    classArray.append(classGroup.classID)
+                    
+                    for faculty in UserData.sharedInstance.facultyData {
+                        if faculty.userID == classGroup.facultyID {
+                            cell.classTeacher.text = faculty.prefix! + " " + faculty.lastName
+                        }
+                    }
+                    break
+                }
             }
-            else {
-                cell.outcomeOutlet.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-            }
-            
-            let rawDate = String(UserData.sharedInstance.sportsData[indexPath.row].date)
-            let oldDateFormatter = DateFormatter()
-            oldDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
-            let oldDate = oldDateFormatter.date(from: rawDate!)
-            
-            let newDateFormatter = DateFormatter()
-            newDateFormatter.dateFormat = "MMM d"
-            
-            let goodDate = newDateFormatter.string(from: oldDate!)
-            
-            cell.dateOutlet?.text = goodDate
         }
         
         return cell
@@ -82,9 +90,33 @@ class SportsTableViewController: UITableViewController, UITextFieldDelegate {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //print("\(studentData[indexPath.section][indexPath.row])")
         //print(studentData[indexPath.row].userID)
-        gameID = UserData.sharedInstance.sportsData[indexPath.row].gameID
-        self.performSegue(withIdentifier: "sportsSegue", sender: nil)
+        classID = classArray[indexPath.row]
+        print(classID)
+        self.performSegue(withIdentifier: "AcademicSegue", sender: nil)
+    }
+    
+    func countClasses() -> Int {
         
+        var counter = 0
+        //print (String(UserData.sharedInstance.userID))
+        //print (data)
+        
+        if UserData.sharedInstance.faculty {
+            for index in UserData.sharedInstance.academicData {
+                if index.facultyID  == String(UserData.sharedInstance.userID) {
+                    counter += 1
+                }
+            }
+        }
+        else {
+            for index in UserData.sharedInstance.academicData {
+                if index.studentID  == String(UserData.sharedInstance.userID) {
+                    counter += 1
+                    print (counter)
+                }
+            }
+        }
+        return counter
     }
 
     /*

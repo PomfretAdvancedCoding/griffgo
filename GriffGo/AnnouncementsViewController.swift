@@ -83,7 +83,7 @@ class SweetsTableViewController: UITableViewController, UITextFieldDelegate {
                 
                 newAnnouncement["content"] = textfield.text as CKRecordValue?
                 
-                if UserData.sharedInstance.isFaculty == true {
+                if UserData.sharedInstance.faculty == true {
                     let greeting = String(
                         UserData.sharedInstance.facultyData[UserData.sharedInstance.userIndex].prefix!
                             + " " +
