@@ -1,6 +1,6 @@
 {
   "name": "SWXMLHash",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "summary": "Simple XML parsing in Swift",
   "homepage": "https://github.com/drmohundro/SWXMLHash",
   "license": {
@@ -22,7 +22,7 @@
   },
   "source": {
     "git": "https://github.com/drmohundro/SWXMLHash.git",
-    "tag": "3.0.3"
+    "tag": "3.0.4"
   },
   "source_files": "Source/*.swift"
 }

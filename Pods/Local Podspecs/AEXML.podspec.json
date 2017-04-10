@@ -1,6 +1,6 @@
 {
   "name": "AEXML",
-  "version": "4.0.1",
+  "version": "4.1.0",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -13,7 +13,7 @@
   "social_media_url": "http://twitter.com/tadija",
   "source": {
     "git": "https://github.com/tadija/AEXML.git",
-    "tag": "4.0.1"
+    "tag": "4.1.0"
   },
   "source_files": "Sources/*.swift",
   "pod_target_xcconfig": {

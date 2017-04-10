@@ -3,7 +3,7 @@ This application makes use of the following third party libraries:
 
 ## AEXML
 
-Copyright (c) 2014-2016 Marko Tadić <tadija@me.com> http://tadija.net
+Copyright (c) 2014-2017 Marko Tadić <tadija@me.com> http://tadija.net
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -97,31 +97,23 @@ SOFTWARE.
 
 ## Firebase
 
-Copyright 2016 Google
+Copyright 2017 Google
 
 ## FirebaseAnalytics
 
-Copyright 2016 Google
+Copyright 2017 Google
 
 ## FirebaseCore
 
-Copyright 2016 Google
+Copyright 2017 Google
 
 ## FirebaseDatabase
 
-Copyright 2016 Google
+Copyright 2017 Google
 
 ## FirebaseInstanceID
 
-Copyright 2016 Google
-
-## GoogleInterchangeUtilities
-
-Copyright 2016 Google
-
-## GoogleSymbolUtilities
-
-Copyright 2016 Google
+Copyright 2017 Google
 
 ## GoogleToolboxForMac
 
@@ -333,7 +325,7 @@ Copyright 2016 Google
 
 The MIT License (MIT)
 
-Copyright (c) 2016 ALEXIS AUBRY RADANOVIC
+Copyright (c) 2016-2017 Alexis Aubry Radanovic
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -431,7 +423,7 @@ THE SOFTWARE.
 
 The MIT License (MIT)
 
-Copyright (c) 2016 Ruoyu Fu
+Copyright (c) 2017 Ruoyu Fu
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
