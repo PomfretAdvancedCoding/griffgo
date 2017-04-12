@@ -118,7 +118,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t4g-Z5-pti">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="108" width="375" height="510"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="8rJ-Kc-sve" id="4Jr-2j-KNo"/>
@@ -133,20 +133,33 @@
                                     <segue destination="iqY-j0-ed7" kind="show" identifier="directorySegue" id="Q1z-ya-0Me"/>
                                 </connections>
                             </button>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="wdD-Sw-1xP">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Yae-eL-TXa"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="t4g-Z5-pti" firstAttribute="top" secondItem="wdD-Sw-1xP" secondAttribute="bottom" id="A1N-hx-LED"/>
                             <constraint firstItem="t4g-Z5-pti" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="O6v-mz-Rp0"/>
                             <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="t4g-Z5-pti" secondAttribute="bottom" id="V5r-pJ-nsS"/>
-                            <constraint firstItem="t4g-Z5-pti" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="b4b-GP-xgg"/>
+                            <constraint firstAttribute="trailing" secondItem="wdD-Sw-1xP" secondAttribute="trailing" id="WOk-U2-4hz"/>
+                            <constraint firstItem="wdD-Sw-1xP" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="hTu-fP-kax"/>
                             <constraint firstAttribute="trailing" secondItem="t4g-Z5-pti" secondAttribute="trailing" id="mt4-cM-7LT"/>
+                            <constraint firstItem="wdD-Sw-1xP" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="sgO-Qe-t08"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="POMFRET" id="HkC-HB-9Ox"/>
+                    <connections>
+                        <outlet property="searchBar" destination="wdD-Sw-1xP" id="HWT-81-Ucg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="562.5" y="779.57746478873241"/>
+            <point key="canvasLocation" x="562.39999999999998" y="779.46026986506752"/>
         </scene>
         <!--Directory View Controller-->
         <scene sceneID="hBo-Ht-mio">

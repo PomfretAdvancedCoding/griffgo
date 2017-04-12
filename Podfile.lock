@@ -1,42 +1,36 @@
 PODS:
-  - AEXML (4.0.1)
-  - Alamofire (4.2.0)
+  - AEXML (4.1.0)
+  - Alamofire (4.4.0)
   - AlamofireImage (3.2.0):
     - Alamofire (~> 4.1)
   - AlamofireXMLRPC (2.1.0):
     - AEXML
     - Alamofire
-  - Firebase (3.11.0):
-    - Firebase/Core (= 3.11.0)
-  - Firebase/Core (3.11.0):
-    - FirebaseAnalytics (= 3.6.0)
-    - FirebaseCore (= 3.4.6)
-  - Firebase/Database (3.11.0):
+  - Firebase (3.15.0):
+    - Firebase/Core (= 3.15.0)
+  - Firebase/Core (3.15.0):
+    - FirebaseAnalytics (= 3.7.0)
+    - FirebaseCore (= 3.5.2)
+  - Firebase/Database (3.15.0):
     - Firebase/Core
-    - FirebaseDatabase (= 3.1.1)
-  - FirebaseAnalytics (3.6.0):
-    - FirebaseCore (~> 3.4)
+    - FirebaseDatabase (= 3.1.2)
+  - FirebaseAnalytics (3.7.0):
+    - FirebaseCore (~> 3.5)
     - FirebaseInstanceID (~> 1.0)
-    - GoogleInterchangeUtilities (~> 1.2)
-    - GoogleSymbolUtilities (~> 1.1)
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
-  - FirebaseCore (3.4.6):
-    - GoogleInterchangeUtilities (~> 1.2)
+  - FirebaseCore (3.5.2):
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
-  - FirebaseDatabase (3.1.1):
-    - FirebaseAnalytics (~> 3.5)
-  - FirebaseInstanceID (1.0.8)
-  - GoogleInterchangeUtilities (1.2.2):
-    - GoogleSymbolUtilities (~> 1.1)
-  - GoogleSymbolUtilities (1.1.2)
-  - GoogleToolboxForMac/Defines (2.1.0)
-  - GoogleToolboxForMac/NSData+zlib (2.1.0):
-    - GoogleToolboxForMac/Defines (= 2.1.0)
-  - HTMLString (2.0.1)
+  - FirebaseDatabase (3.1.2):
+    - FirebaseAnalytics (~> 3.7)
+  - FirebaseInstanceID (1.0.9)
+  - GoogleToolboxForMac/Defines (2.1.1)
+  - GoogleToolboxForMac/NSData+zlib (2.1.1):
+    - GoogleToolboxForMac/Defines (= 2.1.1)
+  - HTMLString (3.0.0)
   - RestEssentials (3.0.0)
   - StringExtensionHTML (0.2.0)
-  - SwiftyJSON (3.1.3)
-  - SWXMLHash (3.0.3)
+  - SwiftyJSON (3.1.4)
+  - SWXMLHash (3.0.4)
 
 DEPENDENCIES:
   - AEXML (from `https://github.com/tadija/AEXML.git`)
@@ -73,19 +67,19 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   AEXML:
-    :commit: 5255f93a2e08996f0e9805b154b1b50a6368137b
+    :commit: 2981eccd86a69ea12a7f71a4c6b4d5177c2972a9
     :git: https://github.com/tadija/AEXML.git
   Alamofire:
-    :commit: 779930c399307caa3d1afb01fd628754e323ea34
+    :commit: 59a60d223c668e75053fbbcb9fced3d15e9654ca
     :git: https://github.com/Alamofire/Alamofire.git
   AlamofireImage:
-    :commit: a4d4c0e36c3f17a80ad89687348bedbc523bba11
+    :commit: d78251c9a99bae0954aae93e4430f27a02336740
     :git: https://github.com/Alamofire/AlamofireImage.git
   AlamofireXMLRPC:
     :commit: e00482d6e468a3e3d2834f552ec5c71e251f2b3f
     :git: https://github.com/kodlian/AlamofireXMLRPC.git
   HTMLString:
-    :commit: 525af269567bb7124bcb6d1ef1d98219562f192d
+    :commit: f6cd285dce271ca2e22ffc5206174a2900a26d7c
     :git: https://github.com/alexaubry/HTMLString.git
   RestEssentials:
     :commit: 4d443c777ba65d80ed146f61dfb058888f8b7b97
@@ -94,30 +88,28 @@ CHECKOUT OPTIONS:
     :commit: 427eed531e19ddc24c0024bfa73ca78c280a1ced
     :git: https://github.com/adela-chang/StringExtensionHTML.git
   SwiftyJSON:
-    :commit: a124861a83545e51dc1609c53328b4b0d4f7647a
+    :commit: 74cda0fa5ae0be109b60a7dad396bcf92a9d5a13
     :git: https://github.com/SwiftyJSON/SwiftyJSON.git
   SWXMLHash:
-    :commit: f45c3363b297e8ac13444534bd8047392151d722
+    :commit: 51740badf3b2a05af9c5df760493e36ae61d5864
     :git: https://github.com/drmohundro/SWXMLHash.git
 
 SPEC CHECKSUMS:
-  AEXML: 905e50474c0a261d335aa8be4ee32d22d69b6fd5
-  Alamofire: 26d8877ec03b4e6e6cbfbf7c03924b4844a2d453
+  AEXML: fd282b96c01b38e97f0e54706d228a50a1abff1a
+  Alamofire: 4c2bf7fa03c4a626163606de0a417568c270575e
   AlamofireImage: 0ff319da83d6abb78a661d7296e742e7f65e15f5
   AlamofireXMLRPC: 9ac52fb02b61c854b762b825759995cdda91cb20
-  Firebase: b8134e285eb33201115bc688bc5d7f112923bc1f
-  FirebaseAnalytics: 9c67af0ebeb8d2146c9b4ea2616439affa947b58
-  FirebaseCore: 03da1cb32615569bbc2830a22f9ad753d9a02ef5
-  FirebaseDatabase: 6de92187481ff0e8e124064f21742e95ee883b02
-  FirebaseInstanceID: ba1e640935235e5fac39dfa816fe7660e72e1a8a
-  GoogleInterchangeUtilities: d5bc4d88d5b661ab72f9d70c58d02ca8c27ad1f7
-  GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
-  GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
-  HTMLString: 57483f4d347c119e61ebe75b34334fa7d8ee9190
+  Firebase: 2b1cdfba1cda8589f32904a697cc753322bff9d8
+  FirebaseAnalytics: 0d1b7d81d5021155be37702a94ba1ec16d45365d
+  FirebaseCore: a024587e43778508700af8c6b1209f7c4516ba02
+  FirebaseDatabase: 05c96d7b43a7368dc91c07791adb49683e1738d1
+  FirebaseInstanceID: 2d0518b1378fe9d685ef40cbdd63d2fdc1125339
+  GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
+  HTMLString: 31f58ab1e35ee5a92cbe0e29dcc8763cd813b2b3
   RestEssentials: 5f82f9e77a712efef38fb4b139bb7b5f93b25d18
   StringExtensionHTML: 1eb6a5a7cc65fe1d95e83743a592c95f95f20452
-  SwiftyJSON: b37a26c0a27587f13e8f223e0280e69c3be5d1d4
-  SWXMLHash: 7c79b6a748c9f74e36c776eaa863381013504d10
+  SwiftyJSON: 05cf0e98a950e2ba343735264f5a96b81e755d00
+  SWXMLHash: e9c3d0443263ad710b06cf7cae51cb2426b6e56d
 
 PODFILE CHECKSUM: 3680ba216ac34d4e6ef1aa6b8d2767dc5d3e2c77
 

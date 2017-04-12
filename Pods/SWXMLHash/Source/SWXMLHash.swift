@@ -597,7 +597,7 @@ public enum XMLIndexer: Sequence {
     */
     public subscript(key: String) -> XMLIndexer {
         do {
-           return try self.byKey(key)
+            return try self.byKey(key)
         } catch let error as IndexingError {
             return .XMLError(error)
         } catch {
@@ -763,7 +763,7 @@ public class XMLElement: XMLContent {
         return children
             .map({ $0 as? TextElement })
             .flatMap({ $0 })
-            .reduce("", { $0 + $1!.text })
+            .reduce("", { $0 + $1.text })
     }
 
     /// All child elements (text or XML)
