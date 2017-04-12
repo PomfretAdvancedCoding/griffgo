@@ -50,6 +50,11 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         return cell
     }
     
+
+    
+    
+    
+    
     //Function saves the ID of the USER when clicked and opens detialed view
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //print("\(studentData[indexPath.section][indexPath.row])")
@@ -73,6 +78,10 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         
     }
     
+    
+    
+    
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchBar.text == nil || searchBar.text == "" {
             inSearchMode = false
@@ -82,9 +91,10 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         else {
             inSearchMode = true
             
-            let lower = searchBar.text!.lowercased()
+            let lower = searchBar.text!
             
             filteredCandies = candies.filter({$0.firstName.range(of: lower) != nil})
+            
             print("0S0_"+searchBar.text!)
             //print(filteredCandies)
             
@@ -96,8 +106,7 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
             }
             print("0E0")
             //tableView.reloadData()
-            
-            
+
         }
         
     }
