@@ -22,6 +22,8 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var userPic: UIImageView!
     @IBOutlet weak var loadingIcon: UIActivityIndicatorView!
     
+    @IBOutlet weak var topView: UIView!
+    
     @IBAction func logoutButton(_ sender: Any) {
         //Logout user
         //TODO: Delete all User Data
@@ -101,6 +103,8 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        topView.layer.cornerRadius = 10
+        
         //Use this to change who you are...
         //UserData.sharedInstance.userID = 0
         
@@ -127,12 +131,15 @@ class FirstViewController: UIViewController {
         //Get Athletic Data
         //sportsGet()
         
+        //sportsLabel.text =
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
 
 
 }
