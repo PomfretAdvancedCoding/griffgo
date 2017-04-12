@@ -56,21 +56,21 @@ class FirstViewController: UIViewController {
         let hour = calendar.component(.hour, from: date as Date)
         
         if hour > 20 && hour < 22 {
-            return "Hope you had a great day "
+            return masterToken
         }
         else if hour < 3 {
-            return "It's getting late "
+            return masterToken
         }
         else if hour < 12 {
-            return "Good morning "
+            return masterToken
         }
         else if hour < 17 {
-            return "Good afternoon "
+            return masterToken
         }
         else if hour >= 17 {
-            return "Good evening "
+            return masterToken
         }
-        else {return "Hello "}
+        else {return masterToken}
     }
     
     func userGreeting () -> String {
