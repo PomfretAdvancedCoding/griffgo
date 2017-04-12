@@ -94,7 +94,10 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
             let lower = searchBar.text!
             
             filteredCandies = candies.filter({$0.firstName.range(of: lower) != nil})
-            
+            filteredCandies = candies.filter({$0.lastName.range(of: lower) != nil})
+            filteredCandies = candies.filter({$0.nickName?.range(of: lower) != nil})
+
+
             print("0S0_"+searchBar.text!)
             //print(filteredCandies)
             
