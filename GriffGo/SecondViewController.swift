@@ -82,7 +82,7 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         else {
             inSearchMode = true
             
-            let lower = searchBar.text!.lowercased()
+            let lower = searchBar.text!
             
             filteredCandies = candies.filter({$0.firstName.range(of: lower) != nil})
             print("0S0_"+searchBar.text!)
