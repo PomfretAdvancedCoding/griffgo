@@ -44,7 +44,9 @@ class FirstViewController: UIViewController {
         }
         Alamofire.request("https://bbk12e1-cdn.myschoolcdn.com/ftpimages/14/user/\(photo)").responseImage { response in
             if let image = response.result.value {
-                let circularImage = image.af_imageRoundedIntoCircle()
+                let circularImage = image.af_imageRounded(withCornerRadius: 20)
+                
+                
                 self.userPic.image = circularImage
                 self.loadingIcon.stopAnimating()
             }
@@ -103,7 +105,9 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        topView.layer.cornerRadius = 10
+        //top view corner radius
+        let boxModelRadius: CGFloat = 15
+        topView.layer.cornerRadius = boxModelRadius
         
         //Use this to change who you are...
         //UserData.sharedInstance.userID = 0
