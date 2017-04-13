@@ -57,6 +57,7 @@ class DataRetrival {
             }
         })
     }
+    
     //Function that requests a list
     func listRequest (listID: String, requestAmt: Int, success: @escaping () -> Void) { //Shoulds Each list call generate a token?
         Alamofire.request("https://pomfretschool.myschoolapp.com/api/authentication/login/", parameters: adminParameters).responseJSON { response in

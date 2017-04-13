@@ -45,7 +45,7 @@ class FirstViewController: UIViewController {
         }
         Alamofire.request("https://bbk12e1-cdn.myschoolcdn.com/ftpimages/14/user/\(photo)").responseImage { response in
             if let image = response.result.value {
-                let circularImage = image.af_imageRounded(withCornerRadius: 20)
+                let circularImage = image.af_imageRounded(withCornerRadius: 15)
                 
                 
                 self.userPic.image = circularImage
