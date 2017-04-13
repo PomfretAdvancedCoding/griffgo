@@ -22,7 +22,8 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var userPic: UIImageView!
     @IBOutlet weak var loadingIcon: UIActivityIndicatorView!
     
-    @IBOutlet weak var topView: UIView!
+    @IBOutlet weak var greetingBoxView: UIView!
+    @IBOutlet weak var scheduleBoxView: UIView!
     
     @IBAction func logoutButton(_ sender: Any) {
         //Logout user
@@ -107,7 +108,12 @@ class FirstViewController: UIViewController {
         
         //top view corner radius
         let boxModelRadius: CGFloat = 15
-        topView.layer.cornerRadius = boxModelRadius
+        greetingBoxView.layer.cornerRadius = boxModelRadius
+        scheduleBoxView.layer.cornerRadius = boxModelRadius
+        
+        
+        
+        
         
         //Use this to change who you are...
         //UserData.sharedInstance.userID = 0
