@@ -22,6 +22,9 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var userPic: UIImageView!
     @IBOutlet weak var loadingIcon: UIActivityIndicatorView!
     
+    @IBOutlet weak var greetingBoxView: UIView!
+    @IBOutlet weak var scheduleBoxView: UIView!
+    
     @IBAction func logoutButton(_ sender: Any) {
         //Logout user
         //TODO: Delete all User Data
@@ -42,7 +45,9 @@ class FirstViewController: UIViewController {
         }
         Alamofire.request("https://bbk12e1-cdn.myschoolcdn.com/ftpimages/14/user/\(photo)").responseImage { response in
             if let image = response.result.value {
-                let circularImage = image.af_imageRoundedIntoCircle()
+                let circularImage = image.af_imageRounded(withCornerRadius: 15)
+                
+                
                 self.userPic.image = circularImage
                 self.loadingIcon.stopAnimating()
             }
@@ -101,6 +106,15 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //top view corner radius
+        let boxModelRadius: CGFloat = 15
+        greetingBoxView.layer.cornerRadius = boxModelRadius
+        scheduleBoxView.layer.cornerRadius = boxModelRadius
+        
+        
+        
+        
+        
         //Use this to change who you are...
         //UserData.sharedInstance.userID = 0
         
@@ -122,18 +136,23 @@ class FirstViewController: UIViewController {
         greetingLabel.text = "\(timeOfDay())\(userGreeting())"
         
         //Set the date
-        dateLabel.text = "Today is \(date())"
+        dateLabel.text = " \(date())"
         
         //Get Athletic Data
         //sportsGet()
         
+        //sportsLabel.text =
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
 
 
 }
+
+// #b02033
 
