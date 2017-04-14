@@ -136,7 +136,7 @@ class FirstViewController: UIViewController {
         greetingLabel.text = "\(timeOfDay())\(userGreeting())"
         
         //Set the date
-        dateLabel.text = "Today is \(date())"
+        dateLabel.text = " \(date())"
         
         //Get Athletic Data
         //sportsGet()
