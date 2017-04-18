@@ -46,6 +46,7 @@
 		37C13C7B1DF0739C006B4B52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37C13C7A1DF0739C006B4B52 /* Assets.xcassets */; };
 		37C13C7E1DF0739C006B4B52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37C13C7C1DF0739C006B4B52 /* LaunchScreen.storyboard */; };
 		D2FE6F14B2833BA7B093F9C4 /* Pods_GriffGo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48638C850F119AFEFDEC1301 /* Pods_GriffGo.framework */; };
+		FC1C0AF71EA693030037C897 /* weeklyschedulcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1C0AF61EA693030037C897 /* weeklyschedulcard.swift */; };
 		FCF52FA11E9C0208004D2DAF /* blackWeekSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF52FA01E9C0208004D2DAF /* blackWeekSchedule.swift */; };
 		FCF52FA31E9E53DA004D2DAF /* redWeekSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF52FA21E9E53DA004D2DAF /* redWeekSchedule.swift */; };
 /* End PBXBuildFile section */
@@ -95,6 +96,7 @@
 		3CFC9407946CA1CDAD75755C /* Pods-GriffGo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GriffGo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GriffGo/Pods-GriffGo.release.xcconfig"; sourceTree = "<group>"; };
 		48638C850F119AFEFDEC1301 /* Pods_GriffGo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GriffGo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57D392AD8DCDF6C2A5A415CE /* Pods-GriffGo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GriffGo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GriffGo/Pods-GriffGo.debug.xcconfig"; sourceTree = "<group>"; };
+		FC1C0AF61EA693030037C897 /* weeklyschedulcard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = weeklyschedulcard.swift; sourceTree = "<group>"; };
 		FCF52FA01E9C0208004D2DAF /* blackWeekSchedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = blackWeekSchedule.swift; sourceTree = "<group>"; };
 		FCF52FA21E9E53DA004D2DAF /* redWeekSchedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = redWeekSchedule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -256,6 +258,7 @@
 				37A5B33D1E0979D000312542 /* Home Page */,
 				37551B421E85B83500C8CD56 /* Academics */,
 				37AC3C741E010FCA009FF492 /* Directory */,
+				FC1C0AF51EA692DD0037C897 /* weekly Schedule */,
 				37AC3C731E010FBE009FF492 /* Announcements */,
 				37AC3C721E010FB2009FF492 /* E-Mail */,
 				37AC3C711E010FAC009FF492 /* Sundial */,
@@ -274,6 +277,15 @@
 				3CFC9407946CA1CDAD75755C /* Pods-GriffGo.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		FC1C0AF51EA692DD0037C897 /* weekly Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				FC1C0AF61EA693030037C897 /* weeklyschedulcard.swift */,
+			);
+			name = "weekly Schedule";
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -410,6 +422,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				376AD1231DF8BFEF00B24CC8 /* AuthViewController.swift in Sources */,
+				FC1C0AF71EA693030037C897 /* weeklyschedulcard.swift in Sources */,
 				37AC3C701E010304009FF492 /* ChecklistItem+CoreDataProperties.swift in Sources */,
 				37551B531E86172A00C8CD56 /* AcademicTableViewCell.swift in Sources */,
 				37AC3C601E00FF9B009FF492 /* Checklists.xcdatamodel in Sources */,
