@@ -43,6 +43,7 @@ class FirstViewController: UIViewController {
         if photo == "" {
             photo = "large_user2723453_934847.png"
         }
+        
         Alamofire.request("https://bbk12e1-cdn.myschoolcdn.com/ftpimages/14/user/\(photo)").responseImage { response in
             if let image = response.result.value {
                 let circularImage = image.af_imageRounded(withCornerRadius: 15)
@@ -61,21 +62,21 @@ class FirstViewController: UIViewController {
         let hour = calendar.component(.hour, from: date as Date)
         
         if hour > 20 && hour < 22 {
-            return masterToken
+            return "Hope you had a great day "
         }
         else if hour < 3 {
-            return masterToken
+            return "It's getting late "
         }
         else if hour < 12 {
-            return masterToken
+            return "Good morning "
         }
         else if hour < 17 {
-            return masterToken
+            return "Good afternoon "
         }
         else if hour >= 17 {
-            return masterToken
+            return "Good evening "
         }
-        else {return masterToken}
+        else {return "Hello "}
     }
     
     func userGreeting () -> String {
@@ -90,7 +91,7 @@ class FirstViewController: UIViewController {
             return greeting!
         }
         else {
-            return UserData.sharedInstance.nickName
+            return UserData.sharedInstance.firstName // .nickName returns an empty string...
         }
     }
     
@@ -105,6 +106,11 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        print("user greet   debug: \(userGreeting())")
+        print("nickname     debug: \(UserData.sharedInstance.firstName)")
+        print("time-day     debug: \(timeOfDay())")
         
         //top view corner radius
         let boxModelRadius: CGFloat = 15
@@ -133,7 +139,8 @@ class FirstViewController: UIViewController {
         //SweetsTableViewController.loadData()
         
         //Set Greeting label
-        greetingLabel.text = "\(timeOfDay())\(userGreeting())"
+        greetingLabel.text = "Welcome, \(userGreeting())"
+        //greetingLabel.text = "\(userGreeting())"
         
         //Set the date
         dateLabel.text = " \(date())"
