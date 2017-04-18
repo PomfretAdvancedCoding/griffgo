@@ -52,7 +52,7 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         {
             cell.backgroundColor = UIColor.white
         } else {
-            cell.backgroundColor = UIColor(red:0.87, green:0.89, blue:0.91, alpha:1.0)
+            cell.backgroundColor = UIColor(red:0.87, green:0.87, blue:0.87, alpha:0.5)
         }
         
         
