@@ -398,7 +398,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mcn-uf-nPW">
                                         <rect key="frame" x="62.5" y="310" width="251" height="50"/>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.60392156860000001" green="0.050980392159999999" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="oN9-JV-wR2"/>
                                             <constraint firstAttribute="width" constant="251" id="t1u-ed-7cn"/>
