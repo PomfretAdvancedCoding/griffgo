@@ -21,7 +21,7 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var greetingLabel: UILabel!
     @IBOutlet weak var userPic: UIImageView!
     @IBOutlet weak var loadingIcon: UIActivityIndicatorView!
-    @IBOutlet weak var timeLabel: UILabel!
+    // @IBOutlet weak var timeLabel: UILabel!
     
     @IBOutlet weak var greetingBoxView: UIView!
     @IBOutlet weak var scheduleBoxView: UIView!
@@ -46,19 +46,20 @@ class FirstViewController: UIViewController {
         Calendar.Component.minute,
         Calendar.Component.second
     ]
-    func timePrinter() -> Void {
-        let time = timeCalculator(dateFormat: "MM/dd/yyyy HH:mm:ss a", endTime: "05/28/2017 20:00:00 a")
-        timeLabel.text = "\(time.month!) Months \(time.day!) Days"
-    }
     
-    func timeCalculator(dateFormat: String, endTime: String, startTime: Date = Date()) -> DateComponents {
-        formatter.dateFormat = dateFormat
-        let _startTime = startTime
-        let _endTime = formatter.date(from: endTime)
-        
-        let timeDifference = userCleander.dateComponents(requestedComponent, from: _startTime, to: _endTime!)
-        return timeDifference
-    }
+//    func timePrinter() -> Void {
+//        let time = timeCalculator(dateFormat: "MM/dd/yyyy HH:mm:ss a", endTime: "05/28/2017 20:00:00 a")
+//        timeLabel.text = "\(time.month!) Months \(time.day!) Days"
+//    }
+//    
+//    func timeCalculator(dateFormat: String, endTime: String, startTime: Date = Date()) -> DateComponents {
+//        formatter.dateFormat = dateFormat
+//        let _startTime = startTime
+//        let _endTime = formatter.date(from: endTime)
+//        
+//        let timeDifference = userCleander.dateComponents(requestedComponent, from: _startTime, to: _endTime!)
+//        return timeDifference
+//    }
 
     
     func picLoader() {
@@ -130,7 +131,8 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timePrinter), userInfo: nil, repeats: true)
+        
+        //  let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timePrinter), userInfo: nil, repeats: true)
         
         print("user greet   debug: \(userGreeting())")
         print("nickname     debug: \(UserData.sharedInstance.firstName)")
