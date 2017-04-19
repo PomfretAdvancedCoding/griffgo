@@ -392,7 +392,7 @@
                                             <constraint firstAttribute="width" constant="251" id="GiB-5v-DdS"/>
                                             <constraint firstAttribute="height" constant="31" id="jSB-QS-Ss2"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="12"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                         <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
