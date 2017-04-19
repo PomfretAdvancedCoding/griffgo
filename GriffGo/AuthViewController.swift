@@ -60,6 +60,9 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loginButtonOutlet.layer.cornerRadius = 10
+        
         //Turns off Auto-Correct for Username and Password
         usernameOutlet.autocorrectionType = .no
         passwordOutlet.autocorrectionType = .no
