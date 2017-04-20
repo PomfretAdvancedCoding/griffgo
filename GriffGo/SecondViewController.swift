@@ -18,16 +18,6 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     
     @IBOutlet weak var searchBar: UISearchBar!
     
-    var candies = UserData.sharedInstance.studentData
-    var filteredCandies = UserData.sharedInstance.studentData
-    //let searchController = UISearchController(searchResultsController: nil)
-    
-    var searchController : UISearchController!
-    var resultController = UITableViewController()
-    
-    var inSearchMode = false
-
-    
     //Table View Functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return UserData.sharedInstance.studentData.count
@@ -46,6 +36,13 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
             cell.textLabel?.text = String(UserData.sharedInstance.studentData[indexPath.row].firstName + " " + UserData.sharedInstance.studentData[indexPath.row].lastName)
         }
         
+        if (indexPath.row % 2 == 0)
+        {
+            cell.backgroundColor = UIColor.white
+        } else {
+            cell.backgroundColor = UIColor(red:0.87, green:0.87, blue:0.87, alpha:0.5)
+        }
+        
         //cell.textLabel?.text = studentData[indexPath.row].firstName
         return cell
     }
@@ -62,46 +59,11 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.searchController = UISearchController(searchResultsController: self.resultController)
-        searchBar.delegate = self
-        
-        //print(UserData.sharedInstance.studentData)
-        print(candies[candies.count-1].firstName)
-        
         
         // Do any additional setup after loading the view, typically from a nib.
         
     }
-    
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchBar.text == nil || searchBar.text == "" {
-            inSearchMode = false
-            print("Not in search mode")
-            //tableView.reloadData()
-        }
-        else {
-            inSearchMode = true
-            
-            let lower = searchBar.text!
-            
-            filteredCandies = candies.filter({$0.firstName.range(of: lower) != nil})
-            print("0S0_"+searchBar.text!)
-            //print(filteredCandies)
-            
-            var i = filteredCandies.count
-            var j = 0
-            while j<i{
-                print(filteredCandies[j].firstName+" "+filteredCandies[j].lastName)
-                j = j+1
-            }
-            print("0E0")
-            //tableView.reloadData()
-            
-            
-        }
-        
-    }
-
+   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
