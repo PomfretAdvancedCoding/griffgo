@@ -107,11 +107,13 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         else {
             inSearchMode = true
             
+
             let lower = searchBar.text!.lowercased()
             print(lower)
             
             // name filter
             filteredCandies = candies.filter({$0.firstName.lowercased().range(of: lower) != nil}) + candies.filter({$0.lastName.lowercased().range(of: lower) != nil}) + candies.filter({$0.nickName?.lowercased().range(of: lower) != nil})
+
             
             
             //first and nick name check

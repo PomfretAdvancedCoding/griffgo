@@ -60,6 +60,9 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loginButtonOutlet.layer.cornerRadius = 10
+        
         //Turns off Auto-Correct for Username and Password
         usernameOutlet.autocorrectionType = .no
         passwordOutlet.autocorrectionType = .no
@@ -138,6 +141,9 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
                         self.loginButtonOutlet.isEnabled = true
                         self.loadingIcon.stopAnimating()
                         FIRAnalytics.logEvent(withName: "Bad_Credentials", parameters: nil)
+                        
+                        // add a time out feature to prevent 3 unsuccessful login attempts
+                        
                         return
                     }
                     else if json["UserId"].int == nil {
