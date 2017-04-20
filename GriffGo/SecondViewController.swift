@@ -20,54 +20,80 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     
     var candies = UserData.sharedInstance.studentData
     var filteredCandies = UserData.sharedInstance.studentData
-    //let searchController = UISearchController(searchResultsController: nil)
     
     var searchController : UISearchController!
     var resultController = UITableViewController()
     
     var inSearchMode = false
-
+    
     
     //Table View Functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return UserData.sharedInstance.studentData.count
+        if inSearchMode{
+            // not working_many useless cell
+            return filteredCandies.count
+        }
+        else{
+            // working
+            return candies.count
+        }
     }
     
-
+    
     //Function determinds what each row will say
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print("this is index path")
+        print(indexPath.count)
         let cell = UITableViewCell()
-        //print (UserData.sharedInstance.studentData[indexPath.row].nickName)
         
-        if UserData.sharedInstance.studentData[indexPath.row].nickName != ""{
-             cell.textLabel?.text = String(UserData.sharedInstance.studentData[indexPath.row].nickName! + " " + UserData.sharedInstance.studentData[indexPath.row].lastName)
+        if inSearchMode{
+            if indexPath.row<filteredCandies.count{
+                
+                
+                if filteredCandies[indexPath.row].nickName != ""{
+                    cell.textLabel?.text = String(filteredCandies[indexPath.row].nickName! + " " + filteredCandies[indexPath.row].lastName)
+                }
+                else {
+                    cell.textLabel?.text = String(filteredCandies[indexPath.row].firstName + " " + filteredCandies[indexPath.row].lastName)
+                }
+            }
+            
         }
-        else {
-            cell.textLabel?.text = String(UserData.sharedInstance.studentData[indexPath.row].firstName + " " + UserData.sharedInstance.studentData[indexPath.row].lastName)
-        }
+        else{
+            if filteredCandies[indexPath.row].nickName != ""{
+                cell.textLabel?.text = String(filteredCandies[indexPath.row].nickName! + " " + filteredCandies[indexPath.row].lastName)
+            }
+            else {
+                cell.textLabel?.text = String(filteredCandies[indexPath.row].firstName + " " + filteredCandies[indexPath.row].lastName)
+            }        }
         
-        //cell.textLabel?.text = studentData[indexPath.row].firstName
         return cell
     }
     
     //Function saves the ID of the USER when clicked and opens detialed view
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //print("\(studentData[indexPath.section][indexPath.row])")
-        //print(studentData[indexPath.row].userID)
-        directoryID = UserData.sharedInstance.studentData[indexPath.row].userID
-        self.performSegue(withIdentifier: "directorySegue", sender: nil)
+        
+        if inSearchMode{
+            
+            if indexPath.row<filteredCandies.count{
+                
+                directoryID = filteredCandies[indexPath.row].userID
+                self.performSegue(withIdentifier: "directorySegue", sender: nil)
+                
+            }
+        }
+        else{
+            directoryID = candies[indexPath.row].userID
+            self.performSegue(withIdentifier: "directorySegue", sender: nil)
+        }
+        
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.searchController = UISearchController(searchResultsController: self.resultController)
         searchBar.delegate = self
-        
-        //print(UserData.sharedInstance.studentData)
-        print(candies[candies.count-1].firstName)
-        
         
         // Do any additional setup after loading the view, typically from a nib.
         
@@ -76,32 +102,45 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchBar.text == nil || searchBar.text == "" {
             inSearchMode = false
-            print("Not in search mode")
-            //tableView.reloadData()
+            
         }
         else {
             inSearchMode = true
             
-            let lower = searchBar.text!
+
+            let lower = searchBar.text!.lowercased()
+            print(lower)
             
-            filteredCandies = candies.filter({$0.firstName.range(of: lower) != nil})
-            print("0S0_"+searchBar.text!)
-            //print(filteredCandies)
+            // name filter
+            filteredCandies = candies.filter({$0.firstName.lowercased().range(of: lower) != nil}) + candies.filter({$0.lastName.lowercased().range(of: lower) != nil}) + candies.filter({$0.nickName?.lowercased().range(of: lower) != nil})
+
             
-            var i = filteredCandies.count
-            var j = 0
-            while j<i{
-                print(filteredCandies[j].firstName+" "+filteredCandies[j].lastName)
-                j = j+1
+            
+            //first and nick name check
+            var index = 0
+            var index2 = 0
+            while index<filteredCandies.count{
+                index2 = index+1
+                while index2<filteredCandies.count{
+                    if filteredCandies[index].userID==filteredCandies[index2].userID {
+                        
+                        filteredCandies.remove(at: index2)
+                        
+                    }
+                    else{
+                        index2+=1
+                    }
+                    
+                }
+                index+=1
             }
-            print("0E0")
-            //tableView.reloadData()
+            
             
             
         }
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
