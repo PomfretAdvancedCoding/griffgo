@@ -67,6 +67,14 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
                 cell.textLabel?.text = String(filteredCandies[indexPath.row].firstName + " " + filteredCandies[indexPath.row].lastName)
             }        }
         
+        if (indexPath.row % 2 == 0)
+        {
+            cell.backgroundColor = UIColor.white
+        } else {
+            cell.backgroundColor = UIColor(red:0.87, green:0.87, blue:0.87, alpha:0.5)
+        }
+
+        
         return cell
     }
     
