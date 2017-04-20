@@ -18,7 +18,7 @@ protocol ListDetailViewControllerDelegate: class {
 
 class ListDetailViewController: UITableViewController {
     @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var iconImageView: UIImageView!
+    /*@IBOutlet weak var iconImageView: UIImageView!*/
     @IBOutlet weak var doneBarButton: UIBarButtonItem!
     
     weak var delegate: ListDetailViewControllerDelegate?
@@ -28,7 +28,7 @@ class ListDetailViewController: UITableViewController {
     }
     
     var checklistToEdit: Checklist?
-    var iconName = "Folder"
+    /*var iconName = "Folder"*/
     
     
     override func viewDidLoad() {
@@ -37,10 +37,10 @@ class ListDetailViewController: UITableViewController {
         if let checklist = checklistToEdit {
             title = "Edit Checklist"
             textField.text = checklist.name
-            iconName = checklist.iconName
+            /*iconName = checklist.iconName*/
             doneBarButton.isEnabled = true
         }
-        iconImageView.image = UIImage(named: iconName)
+       /* iconImageView.image = UIImage(named: iconName)*/
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -64,7 +64,7 @@ class ListDetailViewController: UITableViewController {
         if let checklist = checklistToEdit {
             
             checklist.name = textField.text!
-            checklist.iconName = iconName
+            /*checklist.iconName = iconName*/
             
             delegate?.listDetailViewController(self, didFinishEditingChecklist: checklist)
             
@@ -72,7 +72,7 @@ class ListDetailViewController: UITableViewController {
             
             let checklist = Checklist(context: managedObjectContext)
             checklist.name = textField.text!
-            checklist.iconName = iconName
+            /*checklist.iconName = iconName*/
             
             delegate?.listDetailViewController(self, didFinishAddingChecklist: checklist)
         }
@@ -106,7 +106,7 @@ extension ListDetailViewController: UITextFieldDelegate {
 
 
 // MARK: - IconPickerViewControllerDelegate
-
+/*
 extension ListDetailViewController: IconPickerViewControllerDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -120,5 +120,5 @@ extension ListDetailViewController: IconPickerViewControllerDelegate {
         self.iconName = iconName
         iconImageView.image = UIImage(named: iconName)
         _ = navigationController?.popViewController(animated: true)
-    }
-}
+    }*/
+

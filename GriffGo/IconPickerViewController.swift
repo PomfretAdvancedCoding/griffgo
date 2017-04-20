@@ -14,7 +14,7 @@ protocol IconPickerViewControllerDelegate: class {
 
 class IconPickerViewController: UITableViewController {
     weak var delegate: IconPickerViewControllerDelegate?
-    
+    /*
     let icons = [
         "No Icon",
         "Appointments",
@@ -59,5 +59,5 @@ class IconPickerViewController: UITableViewController {
         }
     }
     
-    
+*/
 }

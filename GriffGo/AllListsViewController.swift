@@ -13,7 +13,7 @@ class AllListsViewController: UITableViewController {
     
     @IBAction func infoButton(_ sender: Any) {
         let alert = UIAlertController(title: "Reminders Guide",
-                                      message: "Reminders allow you to set a time and date for GriffGo to notify you about something. First, create a new category like \"Homework\". Then add items in the category and select when you wish to receive a notification. Reminders are saved in your phone, and can presently be changed even if someone else logs in.",
+                                      message: "According to all known laws of aviation,there is no way a bee should be able to fly.",
                                       preferredStyle: .alert
         )
         alert.addAction(UIAlertAction(title: "Got it", style: .cancel, handler: nil))
