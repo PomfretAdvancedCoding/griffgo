@@ -49,6 +49,7 @@
 		37C13C791DF0739C006B4B52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37C13C771DF0739C006B4B52 /* Main.storyboard */; };
 		37C13C7B1DF0739C006B4B52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37C13C7A1DF0739C006B4B52 /* Assets.xcassets */; };
 		37C13C7E1DF0739C006B4B52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37C13C7C1DF0739C006B4B52 /* LaunchScreen.storyboard */; };
+		7049566A1EA8EF370039CE7E /* DiningHallMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704956691EA8EF370039CE7E /* DiningHallMenuVC.swift */; };
 		D2FE6F14B2833BA7B093F9C4 /* Pods_GriffGo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48638C850F119AFEFDEC1301 /* Pods_GriffGo.framework */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +102,7 @@
 		3CFC9407946CA1CDAD75755C /* Pods-GriffGo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GriffGo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GriffGo/Pods-GriffGo.release.xcconfig"; sourceTree = "<group>"; };
 		48638C850F119AFEFDEC1301 /* Pods_GriffGo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GriffGo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57D392AD8DCDF6C2A5A415CE /* Pods-GriffGo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GriffGo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GriffGo/Pods-GriffGo.debug.xcconfig"; sourceTree = "<group>"; };
+		704956691EA8EF370039CE7E /* DiningHallMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiningHallMenuVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +260,7 @@
 				37C13C771DF0739C006B4B52 /* Main.storyboard */,
 				37C13C711DF0739C006B4B52 /* AppDelegate.swift */,
 				376AD1261DF8D6B300B24CC8 /* UserDataStorage.swift */,
+				704956661EA8EE7D0039CE7E /* Dining Menu */,
 				37AC3C751E010FDC009FF492 /* Login Page */,
 				37A5B33D1E0979D000312542 /* Home Page */,
 				37551B421E85B83500C8CD56 /* Academics */,
@@ -271,6 +274,14 @@
 				37C13C7A1DF0739C006B4B52 /* Assets.xcassets */,
 			);
 			path = GriffGo;
+			sourceTree = "<group>";
+		};
+		704956661EA8EE7D0039CE7E /* Dining Menu */ = {
+			isa = PBXGroup;
+			children = (
+				704956691EA8EF370039CE7E /* DiningHallMenuVC.swift */,
+			);
+			name = "Dining Menu";
 			sourceTree = "<group>";
 		};
 		92210FC171E3154A9D21B63E /* Pods */ = {
@@ -432,6 +443,7 @@
 				37C13C741DF0739C006B4B52 /* FirstViewController.swift in Sources */,
 				2B9CAB371EA84C18008C3DB3 /* Location.swift in Sources */,
 				37AC3C561E00F487009FF492 /* AllListsViewController.swift in Sources */,
+				7049566A1EA8EF370039CE7E /* DiningHallMenuVC.swift in Sources */,
 				37AC3C621E00FFAB009FF492 /* StateManager.swift in Sources */,
 				37AC3C5A1E00F5F6009FF492 /* IconPickerViewController.swift in Sources */,
 				37AC3C6E1E0102C6009FF492 /* ChecklistItemViewCell.swift in Sources */,
