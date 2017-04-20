@@ -58,9 +58,6 @@
                             <constraint firstItem="xUy-Yv-Jzb" firstAttribute="leading" secondItem="zeM-I5-X6S" secondAttribute="leadingMargin" id="w3R-f1-FDz"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <segue destination="eQX-yx-Spb" kind="showDetail" identifier="RedWeekScheduleSegue" id="IhS-4G-iQS"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="guS-le-tlG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -107,12 +104,6 @@
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="y6L-rY-Ftj">
                                 <rect key="frame" x="158" y="138" width="59" height="20"/>
                             </activityIndicatorView>
-                            <imageView userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="griffin" translatesAutoresizingMaskIntoConstraints="NO" id="ZvZ-Qa-Aea">
-                                <rect key="frame" x="87" y="409" width="201" height="163"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="ZvZ-Qa-Aea" secondAttribute="height" multiplier="201:163" id="fW3-1e-hDd"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5k-VA-vYa">
                                 <rect key="frame" x="128.5" y="269" width="118" height="30"/>
                                 <constraints>
@@ -132,9 +123,7 @@
                             <constraint firstItem="UP2-Q0-HGN" firstAttribute="top" secondItem="Cni-uC-FMc" secondAttribute="bottom" constant="8" id="4Bz-nM-M16"/>
                             <constraint firstItem="Cni-uC-FMc" firstAttribute="top" secondItem="157-R4-1wl" secondAttribute="bottom" constant="9" id="5sU-bA-IJZ"/>
                             <constraint firstItem="Cni-uC-FMc" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="6pj-ue-pUE"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ZvZ-Qa-Aea" secondAttribute="trailing" constant="71" id="Ayx-RI-IIf"/>
                             <constraint firstItem="UP2-Q0-HGN" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="G6N-IY-dAJ"/>
-                            <constraint firstItem="ZvZ-Qa-Aea" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="71" id="NC0-0e-o7X"/>
                             <constraint firstAttribute="trailingMargin" secondItem="157-R4-1wl" secondAttribute="trailing" constant="112" id="Z6S-Yf-gzJ"/>
                             <constraint firstItem="y6L-rY-Ftj" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="74" id="hnR-gT-vLN"/>
                             <constraint firstItem="UP2-Q0-HGN" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="jp2-bC-o2H"/>
@@ -144,7 +133,6 @@
                             <constraint firstItem="157-R4-1wl" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="24" id="qcE-SN-4ob"/>
                             <constraint firstItem="y6L-rY-Ftj" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="142" id="uLZ-Jb-goS"/>
                             <constraint firstItem="157-R4-1wl" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="111" id="yBu-k5-RRz"/>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="ZvZ-Qa-Aea" secondAttribute="bottom" constant="46" id="yKe-rh-Vib"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="POMFRET" id="86r-ZC-fOr">
@@ -267,7 +255,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T6x-Rc-0dC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1714" y="1544"/>
+            <point key="canvasLocation" x="-1714.4000000000001" y="1543.1784107946028"/>
         </scene>
         <!--Directory-->
         <scene sceneID="wg7-f3-ORb">
@@ -2549,7 +2537,6 @@
         <image name="academics" width="30" height="30"/>
         <image name="bgLogin" width="600" height="400"/>
         <image name="blackWeekSchedul" width="402" height="418"/>
-        <image name="griffin" width="1050" height="1050"/>
         <image name="homeIcon" width="30" height="30"/>
         <image name="infoIcon" width="30" height="30"/>
         <image name="loginBGCard" width="367" height="477"/>
@@ -2563,6 +2550,5 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="oW9-Ea-8VC"/>
-        <segue reference="IhS-4G-iQS"/>
     </inferredMetricsTieBreakers>
 </document>
