@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B9CAB341EA84C18008C3DB3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9CAB301EA84C18008C3DB3 /* Constants.swift */; };
+		2B9CAB351EA84C18008C3DB3 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9CAB311EA84C18008C3DB3 /* CurrentWeather.swift */; };
+		2B9CAB361EA84C18008C3DB3 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9CAB321EA84C18008C3DB3 /* Forecast.swift */; };
+		2B9CAB371EA84C18008C3DB3 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9CAB331EA84C18008C3DB3 /* Location.swift */; };
 		3724C3A21DF866DA0009F049 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3724C3A11DF866DA0009F049 /* GoogleService-Info.plist */; };
 		373A78F51E1E18D1009B8807 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373A78F41E1E18D1009B8807 /* CloudKit.framework */; };
 		37551B4C1E86111F00C8CD56 /* SportsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37551B491E86111F00C8CD56 /* SportsDetailViewController.swift */; };
@@ -49,6 +53,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B9CAB301EA84C18008C3DB3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2B9CAB311EA84C18008C3DB3 /* CurrentWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
+		2B9CAB321EA84C18008C3DB3 /* Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		2B9CAB331EA84C18008C3DB3 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		3724C3A11DF866DA0009F049 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		373A78F41E1E18D1009B8807 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		37551B491E86111F00C8CD56 /* SportsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsDetailViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +158,10 @@
 		37A5B33D1E0979D000312542 /* Home Page */ = {
 			isa = PBXGroup;
 			children = (
+				2B9CAB301EA84C18008C3DB3 /* Constants.swift */,
+				2B9CAB311EA84C18008C3DB3 /* CurrentWeather.swift */,
+				2B9CAB321EA84C18008C3DB3 /* Forecast.swift */,
+				2B9CAB331EA84C18008C3DB3 /* Location.swift */,
 				37C13C731DF0739C006B4B52 /* FirstViewController.swift */,
 			);
 			name = "Home Page";
@@ -404,8 +416,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				376AD1231DF8BFEF00B24CC8 /* AuthViewController.swift in Sources */,
+				2B9CAB341EA84C18008C3DB3 /* Constants.swift in Sources */,
 				37AC3C701E010304009FF492 /* ChecklistItem+CoreDataProperties.swift in Sources */,
 				37551B531E86172A00C8CD56 /* AcademicTableViewCell.swift in Sources */,
+				2B9CAB361EA84C18008C3DB3 /* Forecast.swift in Sources */,
 				37AC3C601E00FF9B009FF492 /* Checklists.xcdatamodel in Sources */,
 				37AC3C531E00ABC3009FF492 /* SundialViewController.swift in Sources */,
 				37C13C761DF0739C006B4B52 /* SecondViewController.swift in Sources */,
@@ -416,6 +430,7 @@
 				37725CC51E003E3800B491D0 /* MailViewController.swift in Sources */,
 				3784BB8E1DFF5DDB00A34524 /* AnnouncementsViewController.swift in Sources */,
 				37C13C741DF0739C006B4B52 /* FirstViewController.swift in Sources */,
+				2B9CAB371EA84C18008C3DB3 /* Location.swift in Sources */,
 				37AC3C561E00F487009FF492 /* AllListsViewController.swift in Sources */,
 				37AC3C621E00FFAB009FF492 /* StateManager.swift in Sources */,
 				37AC3C5A1E00F5F6009FF492 /* IconPickerViewController.swift in Sources */,
@@ -433,6 +448,7 @@
 				37551B4C1E86111F00C8CD56 /* SportsDetailViewController.swift in Sources */,
 				37AC3C641E00FFC0009FF492 /* CoreDataStack.swift in Sources */,
 				37AC3C6A1E010299009FF492 /* Checklist+CoreDataProperties.swift in Sources */,
+				2B9CAB351EA84C18008C3DB3 /* CurrentWeather.swift in Sources */,
 				37551B521E86172A00C8CD56 /* AssignmentiDetailViewController.swift in Sources */,
 				37551B541E86172A00C8CD56 /* AcademicTableViewController.swift in Sources */,
 				37551B4E1E86111F00C8CD56 /* SportsTableViewController.swift in Sources */,
