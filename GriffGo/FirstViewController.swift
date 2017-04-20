@@ -257,6 +257,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         //currentWeatherTypeLabel.text = currentWeather.weatherType
         //locationLabel.text = currentWeather.cityName
         currentWeatherImage.image = UIImage(named: currentWeather.weatherType)
+        print("\(currentWeather.weatherType)")
     }
 
     
