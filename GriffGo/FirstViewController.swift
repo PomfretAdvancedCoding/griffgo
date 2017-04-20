@@ -12,8 +12,18 @@ import SwiftyJSON
 import SWXMLHash
 import Firebase
 
+import CoreLocation
 
-class FirstViewController: UIViewController {
+
+class FirstViewController: UIViewController, CLLocationManagerDelegate {
+    
+    let locationManager = CLLocationManager()
+    var currentLocation: CLLocation!
+    
+    var currentWeather: CurrentWeather!
+    var forecast: Forecast!
+    var forecasts = [Forecast]()
+    
     
     var ref: FIRDatabaseReference!
 
@@ -26,6 +36,11 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var greetingBoxView: UIView!
     @IBOutlet weak var scheduleBoxView: UIView!
     
+    @IBOutlet weak var currentTempLabel: UILabel!
+    @IBOutlet weak var currentWeatherImage: UIImageView!
+    
+    
+    
     @IBAction func logoutButton(_ sender: Any) {
         //Logout user
         //TODO: Delete all User Data
@@ -37,6 +52,7 @@ class FirstViewController: UIViewController {
     @IBAction func postButton(_ sender: Any) {
         
     }
+    
     let formatter = DateFormatter()
     let userCleander = Calendar.current;
     let requestedComponent : Set<Calendar.Component> = [
@@ -127,16 +143,31 @@ class FirstViewController: UIViewController {
         return dateFormatter.string(from: currentDate as Date)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        locationAuthStatus()
+    }
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //  let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timePrinter), userInfo: nil, repeats: true)
         
-        print("user greet   debug: \(userGreeting())")
-        print("nickname     debug: \(UserData.sharedInstance.firstName)")
-        print("time-day     debug: \(timeOfDay())")
+        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startMonitoringSignificantLocationChanges()
+
+        
+        currentWeather = CurrentWeather()
+        updateMainUI()
+
+        
+        
+        //  let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timePrinter), userInfo: nil, repeats: true)
+
+        
         
         //top view corner radius
         let boxModelRadius: CGFloat = 15
@@ -181,6 +212,53 @@ class FirstViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func locationAuthStatus() {
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            currentLocation = locationManager.location
+            Location.sharedInstance.latitude = currentLocation.coordinate.latitude
+            Location.sharedInstance.longitude = currentLocation.coordinate.longitude
+            currentWeather.downloadWeatherDetails {
+                self.downloadForecastData {
+                    self.updateMainUI()
+                }
+            }
+        } else {
+            locationManager.requestWhenInUseAuthorization()
+            locationAuthStatus()
+        }
+    }
+    
+    func downloadForecastData(completed: @escaping DownloadComplete) {
+        //Downloading forecast weather data for TableView
+        Alamofire.request(FORECAST_URL).responseJSON { response in
+            let result = response.result
+            
+            if let dict = result.value as? Dictionary<String, AnyObject> {
+                
+                if let list = dict["list"] as? [Dictionary<String, AnyObject>] {
+                    
+                    for obj in list {
+                        let forecast = Forecast(weatherDict: obj)
+                        self.forecasts.append(forecast)
+                        print(obj)
+                    }
+                    self.forecasts.remove(at: 0)
+                    //self.tableView.reloadData()
+                }
+            }
+            completed()
+        }
+    }
+    
+    func updateMainUI() {
+        dateLabel.text = currentWeather.date
+        currentTempLabel.text = "\(currentWeather.currentTemp)°"
+        //currentWeatherTypeLabel.text = currentWeather.weatherType
+        //locationLabel.text = currentWeather.cityName
+        currentWeatherImage.image = UIImage(named: currentWeather.weatherType)
+    }
+
     
     
 
