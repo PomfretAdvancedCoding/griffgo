@@ -30,11 +30,11 @@ class DirectoryViewController: UIViewController {
     
     @IBAction func emailButton(_ sender: Any) {
         let url = NSURL(string: "mailto:\(email)")
-        UIApplication.shared.openURL(url as! URL)
+        UIApplication.shared.openURL(url! as URL)
     }
     @IBAction func TellCall(_ sender: Any) {
         let url = NSURL(string: "tel://\(phone)")
-        UIApplication.shared.openURL(url as! URL)
+        UIApplication.shared.openURL(url! as URL)
     }
 
     func getUser() -> Int {

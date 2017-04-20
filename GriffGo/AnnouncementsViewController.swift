@@ -22,7 +22,7 @@ class SweetsTableViewController: UITableViewController, UITextFieldDelegate {
         
         refresh = UIRefreshControl()
         refresh.attributedTitle = NSAttributedString(string: "Pull to load announcements")
-        refresh.addTarget(self, action:  "loadData", for: .valueChanged)
+        refresh.addTarget(self, action:  #selector(SweetsTableViewController.loadData), for: .valueChanged)
         
         self.tableView.addSubview(refresh)
         
