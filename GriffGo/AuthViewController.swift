@@ -51,7 +51,8 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var loadingIcon: UIActivityIndicatorView!
     @IBOutlet weak var messageBox: UILabel!
     
-    //Set Master Token
+        
+       //Set Master Token
     let tokenParameters: Parameters = ["format": "json",
                                        "password": "\(APIPassword)",
                                        "username": "\(APIUserName)"]
