@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="G2N-9X-aQx">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="G2N-9X-aQx">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -495,15 +495,15 @@
                     </tabBar>
                     <connections>
                         <segue destination="mdy-sK-fZG" kind="relationship" relationship="viewControllers" id="7xW-Dk-pjg"/>
-                        <segue destination="mLU-In-vWH" kind="relationship" relationship="viewControllers" id="c5Q-NH-47E"/>
-                        <segue destination="afb-V6-bXu" kind="relationship" relationship="viewControllers" id="69q-Zq-b7I"/>
                         <segue destination="pYo-s0-OFf" kind="relationship" relationship="viewControllers" id="Ori-CJ-7n4"/>
-                        <segue destination="0VO-mm-rnA" kind="relationship" relationship="viewControllers" id="57F-h8-8bX"/>
-                        <segue destination="php-Ck-dj2" kind="relationship" relationship="viewControllers" id="Ll4-N8-Lx3"/>
-                        <segue destination="3yd-Ee-u6u" kind="relationship" relationship="viewControllers" id="aNf-5i-FDw"/>
-                        <segue destination="Ayi-nl-WkI" kind="relationship" relationship="viewControllers" id="EhT-8k-ind"/>
-                        <segue destination="S8m-fh-ahg" kind="relationship" relationship="viewControllers" id="EDh-2Z-vuH"/>
                         <segue destination="Ky6-z2-tsr" kind="relationship" relationship="viewControllers" id="5ez-2h-4jf"/>
+                        <segue destination="0VO-mm-rnA" kind="relationship" relationship="viewControllers" id="57F-h8-8bX"/>
+                        <segue destination="3yd-Ee-u6u" kind="relationship" relationship="viewControllers" id="aNf-5i-FDw"/>
+                        <segue destination="php-Ck-dj2" kind="relationship" relationship="viewControllers" id="Ll4-N8-Lx3"/>
+                        <segue destination="Ayi-nl-WkI" kind="relationship" relationship="viewControllers" id="EhT-8k-ind"/>
+                        <segue destination="afb-V6-bXu" kind="relationship" relationship="viewControllers" id="69q-Zq-b7I"/>
+                        <segue destination="mLU-In-vWH" kind="relationship" relationship="viewControllers" id="c5Q-NH-47E"/>
+                        <segue destination="S8m-fh-ahg" kind="relationship" relationship="viewControllers" id="EDh-2Z-vuH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -617,7 +617,7 @@
                             <constraint firstItem="cj6-AZ-ouc" firstAttribute="top" secondItem="uZN-ua-IIM" secondAttribute="top" id="s9m-pi-Qyn"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Dining Hall Menu" id="zOd-Ao-Vky"/>
+                    <tabBarItem key="tabBarItem" title="Dining Hall Menu" image="CalIcon" id="zOd-Ao-Vky"/>
                     <connections>
                         <outlet property="dininghalloutlet" destination="cj6-AZ-ouc" id="asA-Jn-Yfd"/>
                     </connections>
@@ -2481,6 +2481,7 @@
         <image name=" crest" width="1050" height="1050"/>
         <image name="Address Book-30" width="30" height="30"/>
         <image name="Advertising-30" width="30" height="30"/>
+        <image name="CalIcon" width="30" height="30"/>
         <image name="Pomfret_School_School_Building" width="1440" height="901"/>
         <image name="Thunderstorm" width="92" height="113"/>
         <image name="academics" width="30" height="30"/>
