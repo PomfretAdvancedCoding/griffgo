@@ -61,10 +61,10 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         }
         else{
             if filteredCandies[indexPath.row].nickName != ""{
-                cell.textLabel?.text = String(filteredCandies[indexPath.row].nickName! + " " + filteredCandies[indexPath.row].lastName)
+                cell.textLabel?.text = String(candies[indexPath.row].nickName! + " " + candies[indexPath.row].lastName)
             }
             else {
-                cell.textLabel?.text = String(filteredCandies[indexPath.row].firstName + " " + filteredCandies[indexPath.row].lastName)
+                cell.textLabel?.text = String(candies[indexPath.row].firstName + " " + candies[indexPath.row].lastName)
             }        }
         
         if (indexPath.row % 2 == 0)
